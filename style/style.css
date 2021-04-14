@@ -381,6 +381,7 @@ h1, h2, h3, h4, h5, h6 {
             flex-direction: column;
     font-size: 12px;
     padding: 10px 20px;
+    min-width: 320px;
   }
   .intro__contacts p {
     padding: 8px;
@@ -599,7 +600,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 765px) {
   .statistics__columns-item {
-    width: 300px;
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -609,6 +611,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: -0.625px;
   line-height: 50px;
+}
+
+@media screen and (max-width: 765px) {
+  .statistics__columns-item-number {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .statistics__columns-item-text {

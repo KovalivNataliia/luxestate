@@ -201,6 +201,7 @@
             flex-direction: column;
             font-size: 12px;
             padding: 10px 20px;
+            min-width: 320px;
             p {
                 padding: 8px;
             }
@@ -333,7 +334,8 @@
             height: 175px;
         }
         @media screen and (max-width: 765px) {
-            width: 300px;
+            width: 150px;
+            height: 150px;
         }
     }
     &__columns-item-number {
@@ -342,6 +344,10 @@
         font-weight: 600;
         letter-spacing: -0.625px;
         line-height: 50px;
+        @media screen and (max-width: 765px) {
+            font-size: 30px;
+            line-height: 30px;
+        }
     }
     &__columns-item-text {
         font-weight: 600;
