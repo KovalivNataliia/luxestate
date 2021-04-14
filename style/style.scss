@@ -10,6 +10,12 @@
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    @media screen and (max-width: 1150px) {
+        max-width: 900px;
+    }
+    @media screen and (max-width: 950px) {
+        max-width: 765px;
+    }
 }
 
 .nav {
@@ -28,23 +34,29 @@
         .logo {
             font-size: 25px;
             font-weight: 600;
-            margin-right: 185px;
+            margin: 0 185px 0 0;
             letter-spacing: -0.625px;
-            @media screen and (max-width: 765px) {
+            @media screen and (max-width: 1150px) {
                 font-size: 21px;
-                margin-right: 0;
+                margin: 0 100px 0 0;
+            }
+            @media screen and (max-width: 950px) {
+                margin: 0;
             }
         }
         .contacts {
-            margin-right: 50px;
-            @media screen and (max-width: 765px) {
-                margin-right: 0;
+            margin:0 50px 0 0;
+            @media screen and (max-width: 950px) {
+                margin: 0;
             }
         }
         .btn {
             padding: 10px 15px;
             background-color: #ffcc01;
             border-radius: 3px;
+            @media screen and (max-width: 1150px) {
+                padding: 10px;
+            }
             @media screen and (max-width: 765px) {
                 background-color: #fff;
             }
@@ -59,7 +71,7 @@
             li {
                 display: flex;
                 align-self: center;
-                width: 95%;
+                width: 100%;
                 opacity: 0;
                 visibility: hidden;
             }
@@ -71,8 +83,11 @@
         align-self: center;
         transition: background .2s linear;
         padding: 10px 15px;
+        @media screen and (max-width: 1150px) {
+            padding: 11px;
+        }
         @media screen and (max-width: 765px) {
-            width: 95%;
+            width: 100%;
             text-align: center;
             align-content: center;
         }
@@ -123,15 +138,24 @@
         width: 900px;
         height: 630px;
         position: relative;
+        @media screen and (max-width: 500px) {
+            height: 480px;
+        }
     }
     &__search {
         position: absolute;
         left: -225px;
         right: 750px;
         top: 100px;
+        @media screen and (max-width: 1150px) {
+            left: -200px;
+        }
         @media screen and (max-width: 765px) {
             position: static;
             text-align: center;
+        }
+        @media screen and (max-width: 500px) {
+            margin: 75px 0 0 0;
         }
     }
     &__search-title {
@@ -142,6 +166,12 @@
         letter-spacing: -0.625px;
         @media screen and (max-width: 765px) {
            padding: 50px 0 0 0;
+           font-size: 50px;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 28px;
+            padding: 0;
+            line-height: 50px;
         }
     }
     &__contacts {
@@ -161,10 +191,19 @@
             color: #fff;
             margin: 0 20px 0 0;
         }
-        @media screen and (max-width: 765px) {
+        @media screen and (max-width: 1150px) {
             left: 0;
             width: 100%;
             justify-content: space-around;
+        }
+        @media screen and (max-width: 500px) {
+            top: 405px;
+            flex-direction: column;
+            font-size: 12px;
+            padding: 10px 20px;
+            p {
+                padding: 8px;
+            }
         }
     }
 }
@@ -175,6 +214,12 @@
         display: flex;
         @media screen and (max-width: 765px) {
             display: inline-block;
+        }
+        @media screen and (max-width: 500px) {
+            display: flex;
+            flex-direction: row;
+            max-width: 320px;
+            margin: 25px auto;
         }
     }
     &__form-input {
@@ -188,6 +233,11 @@
         border-bottom-left-radius: 5px;
         @media screen and (max-width: 765px) {
             border-radius: 5px;
+        }
+        @media screen and (max-width: 500px) {
+            height: 50px;
+            min-width: 250px;
+            font-size: 12px;
         }
     }
     &__form-btn {
@@ -204,18 +254,25 @@
         @media screen and (max-width: 765px) {
             border-radius: 5px;
         }
+        @media screen and (max-width: 500px) {
+            height: 50px;
+            min-width: 65px;
+            font-size: 12px;
+            padding: 20px;
+        }
     }
 }
 
 .statistics {
     margin: 130px 0 0 0;
     display: flex;
-    @media screen and (max-width: 765px) {
+    @media screen and (max-width: 950px) {
         flex-direction: column;
+        margin: 80px 0 0 0;
     }
     &__info {
         margin: 0 100px 0 0;
-        @media screen and (max-width: 765px) {
+        @media screen and (max-width: 1150px) {
             margin: 0;
         }
     }
@@ -225,9 +282,10 @@
         font-weight: 600;
         letter-spacing: -0.625px;
         max-width: 350px;
-        @media screen and (max-width: 765px) {
+        @media screen and (max-width: 1150px) {
             max-width: none;
             text-align: center;
+            font-size: 32px;
         }
     }
     &__info-text {
@@ -237,8 +295,11 @@
         font-weight: 500;
         p {
             margin: 50px 0 0 0;
-            @media screen and (max-width: 765px) {
-                margin: 50px;
+            @media screen and (max-width: 1150px) {
+                margin: 40px;
+            }
+            @media screen and (max-width: 950px) {
+                margin: 25px;
             }
         }
     }
@@ -249,7 +310,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media screen and (max-width: 950px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
         @media screen and (max-width: 765px) {
+            flex-wrap: wrap;
             justify-content: space-around;
         }
     }
@@ -262,6 +328,10 @@
         flex-direction: column;
         align-items: center;
         margin: 0 0 30px 0;
+        @media screen and (max-width: 950px) {
+            width: 175px;
+            height: 175px;
+        }
         @media screen and (max-width: 765px) {
             width: 300px;
         }
