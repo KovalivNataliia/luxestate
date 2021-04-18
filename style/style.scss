@@ -331,7 +331,7 @@
     &__columns-item {
         width: 200px;
         height: 200px;
-        background-color: #e6e5e7;
+        background-color: #f6f5f4;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -365,6 +365,7 @@
 }
   
 .apartments {
+    background-color: #f6f5f4;
     margin: 60px 0 0 0;
     @media screen and (max-width: 1150px) {
         margin: 60px 0 0 40px;
@@ -390,6 +391,7 @@
         font-weight: 600;
         letter-spacing: -0.625px;
         max-width: 500px;
+        padding: 50px 0 0 0;
         @media screen and (max-width: 765px) {
             max-width: 300px;
             font-size: 25px;
@@ -433,6 +435,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
     &__search {
+        padding: 0 0 30px 0;
     }
     &__search-form {
         @media screen and (max-width: 765px) {
@@ -472,7 +475,7 @@
             height: 40px;
         }
         @media screen and (max-width: 500px) {
-            min-width: 100px;
+            min-width: 95px;
         }
     }
     &__search-form-all {
@@ -579,5 +582,54 @@
             }
         }
         
+    }
+}
+
+.steps {
+    &__info {
+        margin: 30px 0 0 0;
+    }
+    &__info-title {
+        line-height: 50px;
+        font-weight: 600;
+        font-size: 40px;
+        letter-spacing: -0.625px;
+    }
+    &__info-text {
+        margin: 20px 0 60px 0;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 30px;
+        max-width: 360px;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__cards-item {
+        width: 330px;
+        height: 370px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        margin: 0 0 50px 0;
+    }
+}
+
+.item {
+    &__number {
+        font-size: 200px;
+        position: absolute;
+        font-weight: 600;
+        top: -80px;
+        left: -40px;
+    }
+    &__title {
+    }
+    &__text {
+    }
+    &__button {
     }
 }
