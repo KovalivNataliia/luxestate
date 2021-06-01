@@ -627,13 +627,19 @@ body a {
         }
     }
     &__cards-item {
-        width: 330px;
+        width: 320px;
         height: 370px;
         background-color: #fff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         position: relative;
         overflow: hidden;
         margin: 0 0 50px 0;
+        @media screen and (max-width: 1150px) {
+            width: 250px;
+        }
+        @media screen and (max-width: 765px) {
+            width: 320px;
+        }
     }
     &__cards-item:hover {
         background-color: #ffcc01;
@@ -667,6 +673,12 @@ body a {
         span {
             margin: 0 10px 0 0;
         }
+        @media screen and (max-width: 1150px) {
+            left: 30px;
+        }
+        @media screen and (max-width: 765px) {
+            left: 50px;
+        }
     }
     &__text {
         font-size: 13px;
@@ -677,6 +689,12 @@ body a {
         position: absolute;
         top: 200px;
         left: 70px;
+        @media screen and (max-width: 1150px) {
+            left: 30px;
+        }
+        @media screen and (max-width: 765px) {
+            left: 70px;
+        }
     }
     &__button {
         font-size: 13px;
@@ -701,11 +719,15 @@ body a {
 .services {
     color: #1f373d;
     margin: 20px 0 60px 0;
+
     &__info-title {
         line-height: 50px;
         font-weight: 600;
         font-size: 40px;
         letter-spacing: -0.625px;
+        @media screen and (max-width: 765px) {
+            text-align: center;
+        }
     }
     &__info-text {
         margin: 20px 0 50px 0;
@@ -713,6 +735,10 @@ body a {
         font-weight: 500;
         line-height: 30px;
         max-width: 370px;
+        @media screen and (max-width: 765px) {
+            text-align: center;
+            margin: 20px auto;
+        }
     }
     &__block {
         display: flex;
@@ -731,6 +757,10 @@ body a {
         font-size: 25px;
         letter-spacing: -0.625px;
         margin: 0 0 20px 0;
+        @media screen and (max-width: 765px) {
+            text-align: center;
+            margin: 10px 0;
+        }
     }
     &__block-item-text {
         font-size: 13px;
@@ -740,6 +770,10 @@ body a {
         margin: 0 0 10px 0;
         @media screen and (max-width: 1150px) {
             max-width: none;
+        }
+        @media screen and (max-width: 765px) {
+            text-align: center;
+            margin:  auto;
         }
     }
 }
@@ -779,31 +813,27 @@ body a {
             align-items: center;
         }
     }
-    &__cards-item {
+    &__cards-card {
         max-width: 350px;
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        @media screen and (max-width: 765px) {
-            max-width: 290px;
-        }
-        @media screen and (max-width: 600px) {
-            width: 240px;
-        }
-        @media screen and (max-width: 500px) {
-            width: 160px;
-        }
-        @media screen and (max-width: 320px) {
-            width: 150px;
-        }
-        
+        margin: 0 0 10px 0;
     }
-    &__cards-item:hover {
+    &__cards-card:hover {
         background-color: #fafaf9;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
 }
 
-.item {
+.card {
+    &__img {
+        @media screen and (max-width: 1150px) {
+            width: 250px;
+        }
+        @media screen and (max-width: 765px) {
+            width: 320px;
+        }
+    }
     &__info {
         padding: 25px;
         display: flex;
@@ -850,5 +880,132 @@ body a {
         a:hover {
             color: #ffcc01;
         }
+    }
+}
+
+
+
+.add {
+    color: #1f373d;
+    margin: 60px 0 0 0;
+    &__section {
+        padding: 0 0 80px 0;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1150px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    }
+    &__section:nth-child(1) {
+        @media screen and (max-width: 1150px) {
+            padding: 0;
+        }
+    }
+    &__section-img {
+        position: relative;
+        img {
+            @media screen and (max-width: 540px) {
+                width: 320px;
+            }
+        }
+    }
+    &__section-info {
+        flex: 0 450px;
+        align-self: center;
+        @media screen and (max-width: 1150px) {
+            text-align: center;
+            flex: 0;
+        }
+    }
+    &__section-info:nth-child(odd) {
+        text-align: right;
+        @media screen and (max-width: 1150px) {
+            text-align: center;
+        }
+    }
+    &__section-info-title {
+        font-size: 25px;
+        line-height: 50px;
+        letter-spacing: -0.625px;
+        font-weight: 700;
+    }
+    &__section-info-title:nth-child(1) {
+        @media screen and (max-width: 1150px) {
+            margin: 50px 0 0 0;
+        }
+    }
+    &__section-info-text {
+        margin: 20px 0 0 0;
+        font-size: 13px;
+        line-height: 30px;
+        letter-spacing: -0.625px;
+        @media screen and (max-width: 1150px) {
+            margin: 10px 0 10px 0;
+        }
+    }
+    &__section-info-button {
+        display: inline-block;
+        margin: 60px 0 0 0;
+        background-color: #1f373d;
+        padding: 30px;
+        width: 240px;
+        height: 80px;
+        text-align: center;
+        a {
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: -0.625px;
+            font-weight: 600;
+        }
+        @media screen and (max-width: 1150px) {
+            align-items: center;
+            margin: 20px 0 0 0;
+        }
+    }
+}
+
+.first-location {
+    display: inline-block;
+    position: absolute;
+    background-color: #ffcc01;
+    padding: 25px;
+    font-size: 18px;
+    letter-spacing: -0.625px;
+    text-align: center;
+    width: 340px;
+    left: 110px;
+    top: 300px;
+    i {
+        padding: 0 10px 0 0;
+    }
+    @media screen and (max-width: 540px) {
+        width: 320px;
+        top: 160px;
+        left: 0px;
+        padding: 20px;
+    }
+}
+
+.second-location {
+    display: inline-block;
+    position: absolute;
+    background-color: #ffcc01;
+    padding: 25px;
+    font-size: 18px;
+    letter-spacing: -0.625px;
+    text-align: center;
+    width: 340px;
+    left: 250px;
+    top: 290px;
+    i {
+        padding: 0 10px 0 0;
+    }
+    @media screen and (max-width: 540px) {
+        width: 320px;
+        top: 160px;
+        left: 0px;
+        padding: 20px;
     }
 }
